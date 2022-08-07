@@ -1,0 +1,169 @@
+* {
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+}
+
+body {
+  background-color: #ffffff;
+  color: #3A5374;
+  font-family: lato, sans-serif;
+  transition: 1s;
+}
+
+nav {
+  width: 80%;
+  z-index: 5;
+  margin: auto;
+}
+nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  list-style-type: none;
+}
+nav ul li, nav ul a {
+  text-decoration: none;
+  margin: 30px 0px;
+  color: #37367F;
+  font-size: 17px;
+  font-weight: bold;
+  font-style: italic;
+}
+nav ul .logo {
+  font-weight: bold;
+  font-size: 25px;
+}
+nav ul .logo span {
+  color: #000000;
+  font-weight: bolder;
+  font-style: normal;
+}
+
+.newsCategories {
+  margin: 140px auto 20px auto;
+  width: 70%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style-type: none;
+  flex-wrap: wrap;
+}
+.newsCategories li {
+  cursor: pointer;
+  color: #ffffff;
+  background-color: #6067D5;
+  width: 49%;
+  margin: 7px 0px;
+  text-align: center;
+  padding: 10px 20px;
+  border-radius: 30px;
+  font-weight: bolder;
+  text-transform: uppercase;
+  transition: 1s;
+}
+.newsCategories .world {
+  width: 100%;
+}
+.newsCategories li:hover {
+  background-color: #000000;
+}
+
+.articleCart {
+  color: #37367F;
+  text-align: center;
+  font-size: 24px;
+}
+
+.articleCount {
+  color: #32DCA0;
+  text-align: center;
+  font-size: 15px;
+  font-style: italic;
+}
+
+.articles {
+  margin: 50px auto;
+  width: 70%;
+  list-style-type: none;
+}
+.articles li {
+  display: flex;
+  flex-direction: column;
+  margin: 20px auto;
+  border: 1px solid #787878;
+  border-radius: 20px;
+  padding: 10px;
+  background-color: #fff;
+}
+.articles li h3 {
+  text-align: center;
+  color: #000000;
+  border-bottom: 1px solid #787878;
+  padding: 5px;
+  font-style: oblique;
+}
+.articles li .authorDate {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  color: #787878;
+  padding: 5px;
+}
+
+.mainContainer {
+  display: flex;
+  flex-direction: row;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+.mainContainer img {
+  width: 38%;
+}
+.mainContainer div {
+  width: 60%;
+}
+.mainContainer div h2 {
+  color: #37367F;
+  font-style: normal;
+}
+.mainContainer div p {
+  font-style: italic;
+}
+
+.readMore {
+  width: 100%;
+  padding: 10px;
+}
+.readMore p {
+  text-align: center;
+  color: #37367F;
+  font-weight: bold;
+  padding: 20px;
+}
+.readMore div {
+  font-size: 16px;
+}
+
+.btn {
+  color: #ffffff;
+  background-color: #000000;
+  padding: 5px 10px;
+  margin: 20px auto 5px auto;
+  text-align: center;
+  border-radius: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+.btn a {
+  text-decoration: none;
+  color: #ffffff;
+}

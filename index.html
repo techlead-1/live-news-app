@@ -25,9 +25,9 @@
             <!--navigation section-->
             <nav>
                 <ul class="navigationBar">
-                    <li><a href="https://github.com/techlead-1" target="_blank">GitHub</a></li>
-                    <li><a href="#"><span>Trendy</span>News</a></li>
-                    <li><a href="https://www.linkedin.com/in/mike-lead/" target="_blank">LinkedIn</a></li>
+                    <li><a href="https://github.com/techlead-1" class="github" target="_blank">GitHub</a></li>
+                    <li><a href="#" class="logo"><span>Trendy</span>News</a></li>
+                    <li><a href="https://www.linkedin.com/in/mike-lead/" class="linkedin" target="_blank">LinkedIn</a></li>
                 </ul>
             </nav>
 
@@ -43,12 +43,12 @@
                 <li ng-click="sports()">Sports</li>
                 <li ng-click="technology()">Technology</li>
                 <li ng-click="top()">Top</li>
-                <li ng-click="world()">World</li>
+                <li ng-click="world()" class="world">World</li>
             </ul>
 
             <!--Article selected and article count-->
-            <h3>select a category</h3>
-            <h5>showing 1-10 of {{ articleCount }}</h5>
+            <h3 class="articleCart">Select a category</h3>
+            <h5 class="articleCount">Showing 1-10 of {{ articleCount }}</h5>
 
             <!--Article display-->
             <ul class="articles">
