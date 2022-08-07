@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!--meta data-->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=0">
+        <meta name="author" content="adesany ademola">
+        <meta name="discription" content="a live news web application">
+        <meta name="keyword" content="live-news, news, web, app">
+
+        <!--title and favicon-->
+        <title>Trendy News</title>
+
+        <!--Script and stylesheet-->
+        <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css?family=Lato:100,100italic,300,300italic,regular,italic,700,700italic,900,900italic" rel="stylesheet" />
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    </head>
+
+    <!--document body-->
+    <body>
+        <!--angular app-->
+        <div ng-app="newsApp" ng-controller="newsCtrl">
+
+            <!--navigation section-->
+            <nav>
+                <ul class="navigationBar">
+                    <li><a href="https://github.com/techlead-1" target="_blank">GitHub</a></li>
+                    <li><a href="#"><span>Trendy</span>News</a></li>
+                    <li><a href="https://www.linkedin.com/in/mike-lead/" target="_blank">LinkedIn</a></li>
+                </ul>
+            </nav>
+
+            <!--News categories list-->
+            <ul class="newsCategories">
+                <li ng-click="business()">Business</li>
+                <li ng-click="entertainment()">Entertainment</li>
+                <li ng-click="enviroment()">Enviroment</li>
+                <li ng-click="food()">Food</li>
+                <li ng-click="health()">Health</li>
+                <li ng-click="politics()">Politics</li>
+                <li ng-click="science">Science</li>
+                <li ng-click="sports()">Sports</li>
+                <li ng-click="technology()">Technology</li>
+                <li ng-click="top()">Top</li>
+                <li ng-click="world()">World</li>
+            </ul>
+
+            <!--Article selected and article count-->
+            <h3>select a category</h3>
+            <h5>showing 1-10 of {{ articleCount }}</h5>
+
+            <!--Article display-->
+            <ul class="articles">
+                <li>
+                    <h3>News category</h3><!--news category-->
+
+                    <p class="authorDate"><!--publish date and author-->
+                       <span>PublishDate</span>
+                       <span>Author: loremIpsum</span>
+                    </p>
+
+                    <div class="mainContainer"><!--container for image, title and description-->
+                        <img src="{{imgUrl}}" alt="article image">
+                        <div>
+                            <h2>Article Title</h2>
+                            <p>article description</p>
+                        </div>
+                    </div>
+
+                    <div class="readMore"><!--read more-->
+                        <p>read more</p><!--button-->
+
+                        <div class="articleContent">Article Content</div><!--article content-->
+                    </div>
+
+                    <p class="btn"><a href="{{articleLink}}" target="_blank">Go to article</a></p><!--go to article btn-->
+                </li>
+            </ul>
+
+            <!--Author Label-->
+            <p class="author">By Micheal</p>
+        </div>
+    </body>
+</html>
