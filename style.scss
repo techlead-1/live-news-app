@@ -1,0 +1,185 @@
+//Global style
+* {box-sizing: border-box;
+   padding: 0px;
+   margin: 0px;
+}
+
+//App variable
+$backgroundColor: #ffffff;
+$mainTextColor: #3A5374;
+$lightBlue: #6067D5;
+$deepBlue: #37367F;
+$white: #ffffff;
+$green: #32DCA0;
+$black: #000000;
+$grey: #787878;
+$font: lato, sans-serif;
+
+//Body style
+body {background-color: $backgroundColor;
+      color: $mainTextColor;
+      font-family: $font;
+      transition: 1s;
+}
+
+//Navigation section
+nav {width: 80%;
+     z-index: 5;
+     margin: auto;
+
+     //nav list container
+     ul {display: flex;
+         flex-direction: row;
+         justify-content: space-between;
+         align-items: center;
+         list-style-type: none;
+
+         //nav links
+         li, a {text-decoration: none;
+                margin: 30px 0px;
+                color: $deepBlue;
+                font-size: 17px;
+                font-weight: bold;
+                font-style: italic;
+         }
+
+         //logo
+         .logo {font-weight: bold;
+                font-size: 25px;
+
+                span{color: $black;
+                     font-weight: bolder;
+                     font-style: normal;}
+         }
+     }
+}
+
+//News categories list
+.newsCategories {margin: 140px auto 20px auto;
+                 width: 70%;
+                 display: flex;
+                 justify-content: space-between;
+                 align-items: center;
+                 list-style-type: none;
+                 flex-wrap: wrap;
+
+                 //categories
+                 li{cursor: pointer;
+                    color: $white;
+                    background-color: $lightBlue;
+                    width: 49%;
+                    margin: 7px 0px;
+                    text-align: center;
+                    padding: 10px 20px;
+                    border-radius: 30px;
+                    font-weight: bolder;
+                    text-transform: uppercase;
+                    transition: 1s;
+                 }
+
+                 .world {width: 100%;
+                 }
+
+                 //categories hover effect
+                 li:hover {background-color: $black;
+                 }
+}
+
+//Article selected and article count style
+.articleCart {color: $deepBlue;
+              text-align: center;
+              font-size: 24px;
+}
+
+.articleCount {color: $green;
+               text-align: center;
+               font-size: 15px;
+               font-style: italic;
+}
+
+//Article display style
+.articles {margin: 50px auto;
+           width: 70%;
+           list-style-type: none;
+
+           //articles
+           li {display: flex;
+               flex-direction: column;
+               margin: 20px auto;
+               border: 1px solid $grey;
+               border-radius: 20px;
+               padding: 10px;
+               background-color: #fff;
+
+               //news category
+               h3 {text-align: center;
+                   color: $black;
+                   border-bottom: 1px solid $grey;
+                   padding: 5px;
+                   font-style: oblique;
+               }
+
+               //publish date and author
+               .authorDate {display: flex;
+                            flex-direction: row;
+                            justify-content: space-between;
+                            align-items: center;
+                            color: $grey;
+                            padding: 5px;
+               }
+           }
+}
+
+//container for image title and description
+.mainContainer {display: flex;
+                flex-direction: row;
+                height: fit-content;
+                width: 100%;
+                justify-content: space-between;
+                align-items: center;
+                padding: 10px;
+
+                //img style
+                img{width: 38%;
+                }
+
+                //description and title
+                div {width: 60%;
+
+                    h2 {color: $deepBlue;
+                        font-style: normal;
+                    }
+
+                    p {font-style: italic;}
+                }
+}
+
+//read more section
+.readMore {width: 100%;
+           padding: 10px;
+
+           p {text-align: center;
+              color: $deepBlue;
+              font-weight: bold;
+              padding: 20px;
+           }
+
+           div {font-size: 16px;
+           }
+}
+
+//Go to article button
+.btn {color: $white;
+      background-color: $black;
+      padding: 5px 10px;
+      margin: 20px auto 5px auto;
+      text-align: center;
+      border-radius: 20px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+
+      a {text-decoration: none;
+         color: $white;
+    }
+}
