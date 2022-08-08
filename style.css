@@ -154,16 +154,95 @@ nav ul .logo span {
 
 .btn {
   color: #ffffff;
-  background-color: #000000;
-  padding: 5px 10px;
-  margin: 20px auto 5px auto;
+  background-color: #32DCA0;
+  padding: 5px 7px;
+  margin: 20px 0px 5px 0px;
   text-align: center;
-  border-radius: 20px;
   cursor: pointer;
-  display: flex;
-  align-items: center;
+  border-radius: 20px;
+  width: 100%;
+  transition: 1s;
 }
 .btn a {
   text-decoration: none;
   color: #ffffff;
+  text-align: center;
+}
+
+.btn:hover {
+  background-color: #000000;
+}
+
+.author {
+  position: fixed;
+  bottom: 3%;
+  right: 3%;
+  background-color: #32DCA0;
+  color: #ffffff;
+  padding: 10px 15px;
+  border-radius: 7px;
+  font-style: italic;
+  box-shadow: -20px -20px 27px #c8d0cd, 20px 20px 27px #f4fefb;
+  cursor: pointer;
+}
+.author a {
+  color: #ffffff;
+  font-weight: bold;
+  font-style: italic;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 850px) {
+  .newsCategories {
+    width: 85%;
+  }
+  .articles {
+    width: 85%;
+  }
+}
+@media screen and (max-width: 500px) {
+  nav {
+    width: 90%;
+  }
+  nav ul li, nav ul a {
+    font-size: 15px;
+  }
+  .articles {
+    width: 90%;
+  }
+  .articles .authorDate {
+    font-size: 14px;
+    font-style: italic;
+  }
+  .newsCategories {
+    margin: 60px auto 20px auto;
+    width: 90%;
+  }
+  .newsCategories li {
+    text-transform: capitalize;
+    font-weight: normal;
+    font-size: 15px;
+  }
+  .mainContainer {
+    flex-direction: column;
+    align-items: center;
+    padding: 5px;
+  }
+  .mainContainer img {
+    width: 100%;
+    margin: 10px 0px;
+  }
+  .mainContainer div {
+    width: 100%;
+  }
+  .mainContainer div h2 {
+    font-size: 19px;
+    margin-bottom: 7px;
+  }
+  .mainContainer div p {
+    color: #37367F;
+  }
+  .articleContent {
+    font-size: 16px;
+  }
 }

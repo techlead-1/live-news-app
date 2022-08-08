@@ -170,16 +170,108 @@ nav {width: 80%;
 
 //Go to article button
 .btn {color: $white;
-      background-color: $black;
-      padding: 5px 10px;
-      margin: 20px auto 5px auto;
+      background-color: $green;
+      padding: 5px 7px;
+      margin: 20px 0px 5px 0px;
       text-align: center;
-      border-radius: 20px;
       cursor: pointer;
-      display: flex;
-      align-items: center;
+      border-radius: 20px;
+      width: 100%;
+      transition: 1s;
 
       a {text-decoration: none;
          color: $white;
+         text-align: center;
+    }
+}
+
+.btn:hover {background-color: $black;}
+
+//author tag
+.author {position: fixed;
+         bottom: 3%;
+         right: 3%;
+         background-color: $green;
+         color: $white;
+         padding: 10px 15px;
+         border-radius: 7px;
+         font-style: italic;
+         box-shadow:  -20px -20px 27px #c8d0cd,
+         20px 20px 27px #f4fefb;
+         cursor: pointer;
+
+         a {color: $white;
+            font-weight: bold;
+            font-style: italic;
+            text-decoration: none;
+         }
+}
+
+
+//Responsive Design Media Query
+
+//Tab and mini tab
+@media screen and (max-width: 850px) {
+    //news categories list
+    .newsCategories {width: 85%;
+    }
+
+    //articles display style
+    .articles {width: 85%;
+    }
+}
+
+//Mobile 
+@media screen and (max-width: 500px) {
+    //Navigation bar
+    nav {width: 90%;
+
+        ul {
+            //navlinks
+            li, a {font-size: 15px;
+            }
+        }
+    }
+
+    //articles style
+    .articles {width: 90%;
+
+        //author and date
+        .authorDate {font-size: 14px;
+                     font-style: italic;}
+    }
+
+    //News categories list
+    .newsCategories {margin: 60px auto 20px auto;
+                     width: 90%;
+
+                     //cetegories
+                     li {text-transform: capitalize;
+                         font-weight: normal;
+                         font-size: 15px;
+                     }
+    }
+
+    //Main container containing title and image
+    .mainContainer {flex-direction: column;
+                    align-items: center;
+                    padding: 5px;
+
+                    //image
+                    img {width: 100%;
+                         margin: 10px 0px;}
+
+                    //article discription
+                    div {width: 100%;
+
+                        h2 {font-size: 19px;
+                            margin-bottom: 7px;}
+
+                        p {color: $deepBlue;}
+                    }
+    }
+
+    //article content
+    .articleContent {font-size: 16px;
     }
 }
