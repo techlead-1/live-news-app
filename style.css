@@ -162,11 +162,7 @@ nav ul .logo span {
   border-radius: 20px;
   width: 100%;
   transition: 1s;
-}
-.btn a {
   text-decoration: none;
-  color: #ffffff;
-  text-align: center;
 }
 
 .btn:hover {
