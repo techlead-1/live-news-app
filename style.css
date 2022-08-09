@@ -111,6 +111,7 @@ nav ul .logo span {
   align-items: center;
   color: #787878;
   padding: 5px;
+  flex-wrap: wrap;
 }
 
 .mainContainer {
