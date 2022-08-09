@@ -35,51 +35,43 @@
             <ul class="newsCategories">
                 <li ng-click="business()">Business</li>
                 <li ng-click="entertainment()">Entertainment</li>
-                <li ng-click="enviroment()">Enviroment</li>
-                <li ng-click="food()">Food</li>
                 <li ng-click="health()">Health</li>
-                <li ng-click="politics()">Politics</li>
-                <li ng-click="science">Science</li>
+                <li ng-click="science()">Science</li>
                 <li ng-click="sports()">Sports</li>
                 <li ng-click="technology()">Technology</li>
-                <li ng-click="top()">Top</li>
                 <li ng-click="world()" class="world">World</li>
             </ul>
 
             <!--Article selected and article count-->
-            <h3 class="articleCart">Select a category</h3>
-            <h5 class="articleCount">Showing 1-10 of {{ articleCount }}</h5>
+            <h3 class="articleCart">{{ selectCategory }}</h3>
+            <h5 class="articleCount">Showing {{ articleCount }} articles</h5>
 
             <!--Article display-->
-            <ul class="articles">
+            <ul class="articles" ng-repeat="x in apiData">
                 <li>
-                    <h3>News category</h3><!--news category-->
+                    <h3>{{ selectCategory }}</h3><!--news category-->
 
                     <p class="authorDate"><!--publish date and author-->
-                       <span>PublishDate</span>
-                       <span>Author: loremIpsum</span>
+                       <span>Source: {{ x.source.name }}</span>
+                       <span>Author: {{ x.author }}</span>
                     </p>
 
                     <div class="mainContainer"><!--container for image, title and description-->
-                        <img src="{{imgUrl}}" alt="article image">
+                        <img src="{{x.urlToImage}}" alt="article image">
                         <div>
-                            <h2>Article Title</h2>
-                            <p>article description</p>
+                            <h2>{{ x.title }}</h2>
+                            <p>{{ x.description }}</p>
                         </div>
                     </div>
 
-                    <div class="readMore"><!--read more-->
-                        <p>read more</p><!--button-->
-
-                        <div class="articleContent">Article Content</div><!--article content-->
-                    </div>
-
-                    <p class="btn"><a href="{{articleLink}}" target="_blank">Go to article</a></p><!--go to article btn-->
+                    <a href="{{x.url}}" class="btn" target="_blank">Go to article</a><!--go to article btn-->
                 </li>
             </ul>
 
             <!--author tag-->
             <p class="author"><a href="https://www.linkedin.com/in/mike-lead/" class="linkedin" target="_blank">By Micheal</a></p>
         </div>
+
+        <script src="newsApp.js" defer></script>
     </body>
 </html>
