@@ -12,10 +12,10 @@ app.controller("newsCtrl", function($scope, $http) {
         $scope.articleDisplay = true;
 
         //calling api data
-        $http.get("https://saurav.tech/NewsAPI/top-headlines/category/business/in.json").then(function(response) {
+        $http.get("https://newsdata.io/api/1/news?apikey=pub_990830c4eff110dc4b19e0247441c6ecde16&language=en&category=business").then(function(response) {
             $scope.articleCount = response.data.totalResults;
             $scope.apiStatus = response.status;
-            $scope.apiData = response.data.articles;
+            $scope.apiData = response.data.results;
             console.log(response.status)
 
             //api response status popup
@@ -35,10 +35,10 @@ app.controller("newsCtrl", function($scope, $http) {
         $scope.articleDisplay = true;
 
         //calling api data
-        $http.get("https://saurav.tech/NewsAPI/top-headlines/category/entertainment/in.json").then(function(response) {
+        $http.get("https://newsdata.io/api/1/news?apikey=pub_990830c4eff110dc4b19e0247441c6ecde16&language=en&category=entertainment").then(function(response) {
             $scope.articleCount = response.data.totalResults;
             $scope.apiStatus = response.status;
-            $scope.apiData = response.data.articles;
+            $scope.apiData = response.data.results;
             console.log(response.status)
 
             //api response status popup
@@ -58,10 +58,10 @@ app.controller("newsCtrl", function($scope, $http) {
         $scope.articleDisplay = true;
 
         //calling api data
-        $http.get("https://saurav.tech/NewsAPI/top-headlines/category/health/in.json").then(function(response) {
+        $http.get("https://newsdata.io/api/1/news?apikey=pub_990830c4eff110dc4b19e0247441c6ecde16&language=en&category=health").then(function(response) {
             $scope.articleCount = response.data.totalResults;
             $scope.apiStatus = response.status;
-            $scope.apiData = response.data.articles;
+            $scope.apiData = response.data.results;
             console.log(response.status)
 
             //api response status popup
@@ -81,10 +81,10 @@ app.controller("newsCtrl", function($scope, $http) {
         $scope.articleDisplay = true;
 
         //calling api data
-        $http.get("https://saurav.tech/NewsAPI/top-headlines/category/science/in.json").then(function(response) {
+        $http.get("https://newsdata.io/api/1/news?apikey=pub_990830c4eff110dc4b19e0247441c6ecde16&language=en&category=science").then(function(response) {
             $scope.articleCount = response.data.totalResults;
             $scope.apiStatus = response.status;
-            $scope.apiData = response.data.articles;
+            $scope.apiData = response.data.results;
             console.log(response.status)
 
             //api response status popup
@@ -104,10 +104,10 @@ app.controller("newsCtrl", function($scope, $http) {
         $scope.articleDisplay = true;
 
         //calling api data
-        $http.get("https://saurav.tech/NewsAPI/top-headlines/category/sports/in.json").then(function(response) {
+        $http.get("https://newsdata.io/api/1/news?apikey=pub_990830c4eff110dc4b19e0247441c6ecde16&language=en&category=sports").then(function(response) {
             $scope.articleCount = response.data.totalResults;
             $scope.apiStatus = response.status;
-            $scope.apiData = response.data.articles;
+            $scope.apiData = response.data.results;
             console.log(response.status)
 
             //api response status popup
@@ -127,10 +127,10 @@ app.controller("newsCtrl", function($scope, $http) {
         $scope.articleDisplay = true;
 
         //calling api data
-        $http.get("https://saurav.tech/NewsAPI/top-headlines/category/technology/in.json").then(function(response) {
+        $http.get("https://newsdata.io/api/1/news?apikey=pub_990830c4eff110dc4b19e0247441c6ecde16&language=en&category=technology").then(function(response) {
             $scope.articleCount = response.data.totalResults;
             $scope.apiStatus = response.status;
-            $scope.apiData = response.data.articles;
+            $scope.apiData = response.data.results;
             console.log(response.status)
 
             //api response status popup
@@ -144,16 +144,104 @@ app.controller("newsCtrl", function($scope, $http) {
         })
     }
 
+    //creating an event for Enviroment category
+    $scope.enviroment = function() {
+        $scope.articleDisplay = true;
+
+        //calling api data
+        $http.get("https://newsdata.io/api/1/news?apikey=pub_990830c4eff110dc4b19e0247441c6ecde16&language=en&category=environment").then(function(response) {
+            $scope.articleCount = response.data.totalResults;
+            $scope.apiStatus = response.status;
+            $scope.apiData = response.data.results;
+            console.log(response.status)
+
+            //api response status popup
+        if($scope.apiStatus == 200) {
+            alert("Success: enjoy the latest enviroment news");
+            $scope.selectCategory = "Enviroment News";
+        }
+        else{
+            alert("There is an issue with the provider, please try again")
+        };
+        })
+    }
+
+    //creating an event for Food category
+    $scope.food = function() {
+        $scope.articleDisplay = true;
+
+        //calling api data
+        $http.get("https://newsdata.io/api/1/news?apikey=pub_990830c4eff110dc4b19e0247441c6ecde16&language=en&category=food").then(function(response) {
+            $scope.articleCount = response.data.totalResults;
+            $scope.apiStatus = response.status;
+            $scope.apiData = response.data.results;
+            console.log(response.status)
+
+            //api response status popup
+        if($scope.apiStatus == 200) {
+            alert("Success: enjoy the latest food news");
+            $scope.selectCategory = "Food News";
+        }
+        else{
+            alert("There is an issue with the provider, please try again")
+        };
+        })
+    }
+
+    //creating an event for Top category
+    $scope.top = function() {
+        $scope.articleDisplay = true;
+
+        //calling api data
+        $http.get("https://newsdata.io/api/1/news?apikey=pub_990830c4eff110dc4b19e0247441c6ecde16&language=en&category=top").then(function(response) {
+            $scope.articleCount = response.data.totalResults;
+            $scope.apiStatus = response.status;
+            $scope.apiData = response.data.results;
+            console.log(response.status)
+
+            //api response status popup
+        if($scope.apiStatus == 200) {
+            alert("Success: enjoy the latest top news");
+            $scope.selectCategory = "Top News";
+        }
+        else{
+            alert("There is an issue with the provider, please try again")
+        };
+        })
+    }
+
+    //creating an event for Politics category
+    $scope.politics = function() {
+        $scope.articleDisplay = true;
+
+        //calling api data
+        $http.get("https://newsdata.io/api/1/news?apikey=pub_990830c4eff110dc4b19e0247441c6ecde16&language=en&category=politics").then(function(response) {
+            $scope.articleCount = response.data.totalResults;
+            $scope.apiStatus = response.status;
+            $scope.apiData = response.data.results;
+            console.log(response.status)
+
+            //api response status popup
+        if($scope.apiStatus == 200) {
+            alert("Success: enjoy the latest politics news");
+            $scope.selectCategory = "Politics News";
+        }
+        else{
+            alert("There is an issue with the provider, please try again")
+        };
+        })
+    }
+
 
     //creating an event for World category
     $scope.world = function() {
         $scope.articleDisplay = true;
 
         //calling api data
-        $http.get("https://saurav.tech/NewsAPI/top-headlines/category/general/in.json").then(function(response) {
+        $http.get("https://newsdata.io/api/1/news?apikey=pub_990830c4eff110dc4b19e0247441c6ecde16&language=en&category=world").then(function(response) {
             $scope.articleCount = response.data.totalResults;
             $scope.apiStatus = response.status;
-            $scope.apiData = response.data.articles;
+            $scope.apiData = response.data.results;
             console.log(response.status)
 
             //api response status popup

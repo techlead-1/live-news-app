@@ -35,16 +35,20 @@
             <ul class="newsCategories">
                 <li ng-click="business()">Business</li>
                 <li ng-click="entertainment()">Entertainment</li>
+                <li ng-click="food()">Food</li>
                 <li ng-click="health()">Health</li>
                 <li ng-click="science()">Science</li>
+                <li ng-click="enviroment()">Environment</li>
                 <li ng-click="sports()">Sports</li>
                 <li ng-click="technology()">Technology</li>
+                <li ng-click="top()">Top</li>
+                <li ng-click="politics()">Politics</li>
                 <li ng-click="world()" class="world">World</li>
             </ul>
 
             <!--Article selected and article count-->
             <h3 class="articleCart">{{ selectCategory }}</h3>
-            <h5 class="articleCount">Showing {{ articleCount }} articles</h5>
+            <h5 class="articleCount">Showing 1-10 of {{ articleCount }} articles</h5>
 
             <!--Article display-->
             <ul class="articles" ng-repeat="x in apiData">
@@ -52,19 +56,19 @@
                     <h3>{{ selectCategory }}</h3><!--news category-->
 
                     <p class="authorDate"><!--publish date and author-->
-                       <span>Source: {{ x.source.name }}</span>
-                       <span>Author: {{ x.author }}</span>
+                       <span>{{ x.pubDate }}</span>
+                       <span>Author: {{ x.creator.toString() }}</span>
                     </p>
 
                     <div class="mainContainer"><!--container for image, title and description-->
-                        <img src="{{x.urlToImage}}" alt="article image">
+                        <img src="{{x.image_url}}" alt="article image">
                         <div>
                             <h2>{{ x.title }}</h2>
                             <p>{{ x.description }}</p>
                         </div>
                     </div>
 
-                    <a href="{{x.url}}" class="btn" target="_blank">Go to article</a><!--go to article btn-->
+                    <a href="{{x.link}}" class="btn" target="_blank">Go to article</a><!--go to article btn-->
                 </li>
             </ul>
 
