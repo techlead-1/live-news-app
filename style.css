@@ -42,7 +42,7 @@ nav ul .logo span {
 }
 
 .newsCategories {
-  margin: 140px auto 20px auto;
+  margin: 60px auto 20px auto;
   width: 70%;
   display: flex;
   justify-content: space-between;
@@ -54,17 +54,18 @@ nav ul .logo span {
   cursor: pointer;
   color: #ffffff;
   background-color: #6067D5;
-  width: 49%;
+  width: 22%;
   margin: 7px 0px;
   text-align: center;
   padding: 10px 20px;
   border-radius: 30px;
-  font-weight: bolder;
+  font-weight: normal;
   text-transform: uppercase;
   transition: 1s;
-}
-.newsCategories .world {
-  width: 100%;
+  font-size: 11px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .newsCategories li:hover {
   background-color: #000000;
@@ -179,14 +180,19 @@ nav ul .logo span {
   padding: 10px 15px;
   border-radius: 7px;
   font-style: italic;
-  box-shadow: -20px -20px 27px #c8d0cd, 20px 20px 27px #f4fefb;
+  box-shadow: -20px -20px 27px #c8d0cd, 20px 20px 27px hsl(162deg, 83%, 98%);
   cursor: pointer;
+  transition: 0.8s;
 }
 .author a {
   color: #ffffff;
   font-weight: bold;
   font-style: italic;
   text-decoration: none;
+}
+
+.author:hover {
+  background-color: #000000;
 }
 
 @media screen and (max-width: 850px) {
@@ -218,7 +224,8 @@ nav ul .logo span {
   .newsCategories li {
     text-transform: capitalize;
     font-weight: normal;
-    font-size: 15px;
+    font-size: 9px;
+    width: 30%;
   }
   .mainContainer {
     flex-direction: column;
@@ -242,4 +249,4 @@ nav ul .logo span {
   .articleContent {
     font-size: 16px;
   }
-}
+}/*# sourceMappingURL=style.css.map */

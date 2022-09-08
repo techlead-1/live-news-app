@@ -55,7 +55,7 @@ nav {width: 80%;
 }
 
 //News categories list
-.newsCategories {margin: 140px auto 20px auto;
+.newsCategories {margin: 60px auto 20px auto;
                  width: 70%;
                  display: flex;
                  justify-content: space-between;
@@ -67,17 +67,18 @@ nav {width: 80%;
                  li{cursor: pointer;
                     color: $white;
                     background-color: $lightBlue;
-                    width: 49%;
+                    width: 22%;
                     margin: 7px 0px;
                     text-align: center;
                     padding: 10px 20px;
                     border-radius: 30px;
-                    font-weight: bolder;
+                    font-weight: normal;
                     text-transform: uppercase;
                     transition: 1s;
-                 }
-
-                 .world {width: 100%;
+                    font-size: 11px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
                  }
 
                  //categories hover effect
@@ -194,14 +195,19 @@ nav {width: 80%;
          border-radius: 7px;
          font-style: italic;
          box-shadow:  -20px -20px 27px #c8d0cd,
-         20px 20px 27px #f4fefb;
+         20px 20px 27px hsl(162, 83%, 98%);
          cursor: pointer;
+         transition: 0.8s;
 
          a {color: $white;
             font-weight: bold;
             font-style: italic;
             text-decoration: none;
          }
+}
+
+.author:hover{
+         background-color: $black;
 }
 
 
@@ -245,7 +251,8 @@ nav {width: 80%;
                      //cetegories
                      li {text-transform: capitalize;
                          font-weight: normal;
-                         font-size: 15px;
+                         font-size: 9px;
+                         width: 30%;
                      }
     }
 

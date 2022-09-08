@@ -1,0 +1,19 @@
+{
+  "name": "news-app",
+  "version": "1.0.0",
+  "description": "\"news web application\"",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/techlead-1/live-news-app.git\".git"
+  },
+  "author": "\"Ademola Adesanya\"",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/techlead-1/live-news-app.git\"/issues"
+  },
+  "homepage": "https://github.com/techlead-1/live-news-app.git\"#readme"
+}
