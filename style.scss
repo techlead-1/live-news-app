@@ -143,10 +143,12 @@ nav {width: 80%;
 
                 //img style
                 img{width: 38%;
+                    height: fit-content;
                 }
 
                 //description and title
                 div {width: 60%;
+                     height: fit-content;
 
                     h2 {color: $deepBlue;
                         font-style: normal;

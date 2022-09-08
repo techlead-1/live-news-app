@@ -7,6 +7,15 @@ app.controller("newsCtrl", function($scope, $http) {
     $scope.readMore = false;
     $scope.more = "show more"
 
+    //preloaded api
+    $http.get("https://newsdata.io/api/1/news?apikey=pub_990830c4eff110dc4b19e0247441c6ecde16&q=crypto&language=en").then(function(response) {
+        $scope.articleCount = response.data.totalResults;
+        $scope.apistatus = response.status;
+        $scope.apiData = response.data.results;
+        console.log($scope.apiData)
+    })
+
+
     //creating an event for Business category
     $scope.business = function() {
         $scope.articleDisplay = true;

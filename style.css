@@ -128,9 +128,15 @@ nav ul .logo span {
 }
 .mainContainer img {
   width: 38%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
 }
 .mainContainer div {
   width: 60%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
 }
 .mainContainer div h2 {
   color: #37367F;
